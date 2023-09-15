@@ -1,0 +1,43 @@
+*{
+    background: rgb(207, 189, 189);
+    color: rgb(43, 6, 78);
+}
+
+strong{
+    color: rgb(0, 45, 97);
+}
+
+dt + dd, dd + dd {
+    font-style: italic;
+}
+
+.header *{
+    padding: 0;
+    margin: 0;
+}
+
+.header nav{
+    display: flex;
+    align-items: center;
+    padding: 30px 15px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu li{
+    margin-left: 60px;
+}
+
+.menu li a{
+    color: rgb(43, 6, 78);
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: rgb(187, 59, 0);
+}
+
+
