@@ -1,10 +1,13 @@
-*{
+
+
+body{
     background: rgb(207, 189, 189);
-    color: rgb(43, 6, 78);
+    margin: 0;
 }
 
 strong{
     color: rgb(0, 45, 97);
+    font-family: 'Montserrat', sans-serif;
 }
 
 dt + dd, dd + dd {
@@ -12,6 +15,12 @@ dt + dd, dd + dd {
 }
 
 .header *{
+    padding: 0;
+    margin: 0;
+    background-color: rgb(177, 144, 196);;
+}
+
+.header_warp nav{
     padding: 0;
     margin: 0;
 }
@@ -34,10 +43,45 @@ dt + dd, dd + dd {
 .menu li a{
     color: rgb(43, 6, 78);
     text-decoration: none;
+    padding: 10px;
 }
 
 .menu li a:hover{
     color: rgb(187, 59, 0);
+    background-color: rgb(173, 159, 159);
+}
+
+.menu li a:active{
+    color: rgb(185, 146, 146)
+}
+
+main a:visited{
+    color: rgb(172, 96, 62);
+}
+
+main > aside{
+    float: left;
+}
+
+main > aside *{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main > aside ul{
+    list-style: none;
+    padding: 20%;
+}
+
+main > section{
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+main section, aside{
+    background-color: aliceblue;
+    padding: auto%;
 }
 
 
