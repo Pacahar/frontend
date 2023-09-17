@@ -1,13 +1,15 @@
-
+*{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 241, 233);
+}
 
 body{
-    background: rgb(207, 189, 189);
+    background: #37306B;
     margin: 0;
 }
 
 strong{
-    color: rgb(0, 45, 97);
-    font-family: 'Montserrat', sans-serif;
+    color: #D27685;
 }
 
 dt + dd, dd + dd {
@@ -15,9 +17,10 @@ dt + dd, dd + dd {
 }
 
 .header *{
+    font-weight: bold;
     padding: 0;
     margin: 0;
-    background-color: rgb(177, 144, 196);;
+    background-color: #9E4784;;
 }
 
 .header_warp nav{
@@ -28,7 +31,7 @@ dt + dd, dd + dd {
 .header nav{
     display: flex;
     align-items: center;
-    padding: 30px 15px;
+    padding: 8px 8px;
 }
 
 .menu{
@@ -41,29 +44,33 @@ dt + dd, dd + dd {
 }
 
 .menu li a{
-    color: rgb(43, 6, 78);
+    color: #37306B;
     text-decoration: none;
     padding: 10px;
 }
 
 .menu li a:hover{
-    color: rgb(187, 59, 0);
-    background-color: rgb(173, 159, 159);
+    color: #D27685;
+    background-color: rgba(255, 132, 49, 0.068);
 }
 
 .menu li a:active{
-    color: rgb(185, 146, 146)
+    color: rgba(253, 135, 0, 0.205);
+}
+
+main a{
+    color: #ff91007c;
 }
 
 main a:visited{
-    color: rgb(172, 96, 62);
+    color: rgba(253, 135, 0, 0.205);
 }
 
 main > aside{
     float: left;
 }
 
-main > aside *{
+main > aside{
     margin-left: auto;
     margin-right: auto;
 }
@@ -80,8 +87,8 @@ main > section{
 }
 
 main section, aside{
-    background-color: aliceblue;
-    padding: auto%;
+    background-color: #66347F;
+    padding: 15px;
 }
 
 
