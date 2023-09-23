@@ -4,12 +4,12 @@
 }
 
 body{
-    background: #37306B;
+    background: #1B1B2F;
     margin: 0;
 }
 
 strong{
-    color: #D27685;
+    color: #E43F5A;
 }
 
 dt + dd, dd + dd { /*dt ~ dd*/
@@ -18,7 +18,7 @@ dt + dd, dd + dd { /*dt ~ dd*/
 
 .footer{
     position: relative;
-    background-color: #9E4784;
+    background-color: #1F4068;
     margin: 0;
     padding: 30px;
 }
@@ -32,14 +32,15 @@ dt + dd, dd + dd { /*dt ~ dd*/
 .header{
     position: fixed;
     top: 0px;
-    width: 100%;
+    left: 0;
+    right: 0;
 }
 
 .header *{
     font-weight: bold;
     padding: 0;
     margin: 0;
-    background-color: #9E4784;;
+    background-color: #1F4068;
 }
 
 .header_warp nav{
@@ -64,7 +65,7 @@ dt + dd, dd + dd { /*dt ~ dd*/
 
 .menu li a{
     font-size: large;
-    color: #37306B;
+    color: #E43F5A;
     text-decoration: none;
     padding: 10px;
 }
@@ -84,7 +85,7 @@ main section img{
 }
 
 main{
-    padding-top: 5%;
+    padding-top: 10%;
 }
 
 main a{
@@ -96,12 +97,11 @@ main a:visited{
 }
 
 main > aside{
-    top: 6%;
+    top: 100px;
     position: sticky;
     border-radius: 5px;
     float: left;
     margin-left: 30px;
-    margin-right: auto;
     padding: 10px;
 }
 
@@ -113,11 +113,11 @@ main > aside ul{
 
 main > section{
     border-radius: 20px;
-    margin-left: 25%;
-    margin-right: 25%;
+    display: block;
+    width: 50%;
+    margin: auto;
     margin-top: 5px;
     margin-bottom: 5px;
-    width: 50%;
 }
 
 main > img{
@@ -127,7 +127,7 @@ main > img{
 }
 
 main section, aside{
-    background-color: #66347F;
+    background-color: #162447;
     padding: 15px;
 }
 
