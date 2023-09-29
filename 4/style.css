@@ -1,0 +1,178 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(255, 241, 233);
+}
+
+body{
+    background: #1B1B2F;
+    margin: 0;
+}
+
+strong{
+    color: #E43F5A;
+}
+
+.footer{
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: #1F4068;
+    margin: auto;
+    margin-top: 30%;
+    padding: 30px;
+}
+
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0;
+    right: 0;
+}
+
+.header *{
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    background-color: #1F4068;
+}
+
+.header_warp nav{
+    padding: 0;
+    margin: 0;
+}
+
+.header nav{
+    display: flex;
+    align-items: center;
+    padding: 8px 8px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+}
+
+.menu li{
+    margin: 0px;
+    padding: 15px;
+}
+
+.menu li a{
+    font-size: large;
+    color: #E43F5A;
+    text-decoration: none;
+    padding: 10px;
+}
+
+.menu li a:hover{
+    color: #D27685;
+    background-color: rgba(255, 132, 49, 0.068);
+}
+
+.menu li a:active{
+    color: rgba(253, 135, 0, 0.205);
+}
+
+main section img{
+    float: right;
+    margin: 20px;
+}
+
+main{
+    padding-top: 10%;
+}
+
+main a{
+    color: #e46821;
+}
+
+main a:visited{
+    color: rgb(189, 110, 20);
+}
+
+main > aside{
+    top: 100px;
+    position: sticky;
+    border-radius: 5px;
+    float: left;
+    margin-left: 30px;
+    padding: 10px;
+}
+
+main > aside ul{
+    list-style: none;
+    padding: 10px;
+    margin: 5px;
+}
+
+main > section{
+    border-radius: 20px;
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+main iframe{
+    width: 500;
+    height: 500;
+    border-radius: 5%;
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main section, aside{
+    background-color: #162447;
+    padding: 15px;
+}
+
+.form{
+    padding: 0% 5% 5% 5%;
+}
+
+.form > *{
+    margin: 5px;
+    padding: 5px;
+}
+
+.form h1{
+    display: flex;
+    justify-content: center;
+}
+
+.form button{
+    padding: 0;
+}
+
+.form textarea{
+    display: block;
+    background-color: #1F4068;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 30px;
+}
+
+.form select{
+    background-color: #1F4068;
+}
+
+.form input{
+    float: right;
+    background-color: #1F4068;
+    transition: 0.3s;
+}
+
+.form input::placeholder{
+    font-weight: bold;
+}
+
+.form input:focus{
+    transform: scale(1.1);
+
+}
+
+
