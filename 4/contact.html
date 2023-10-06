@@ -26,7 +26,7 @@
                 <form action="" method="get" class="form">    
                     <h1 a><strong>Заполните форму</strong></h1>
                     <p><label for="name">Введите имя: </label><input type="text" name="name" id="name" pattern="\D*" placeholder="Иван" required></p>
-                    <p><label for="tel">Введите телефон: </label><input type="tel" name="tel" id="tel" placeholder="+79152416128" required></p>
+                    <p><label for="tel">Введите телефон: </label><input type="tel" name="tel" id="tel" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" placeholder="+79999999999" required></p>
                     <fieldset>
                         <legend>Выберете пол</legend>
                         <label>Мужчина <input type="radio" name="sex"></label><br>
@@ -45,7 +45,7 @@
                         <option value="by">Беларусь</optin>
                         <option value="kz">Казахстан</optin>
                         <option value="other">Другое</optin>
-                        <option value="" selected>--Страная проживания--</optin>
+                        <option value="" selected>--Страна проживания--</optin>
                     </select>
                     <textarea name="message" id="text" cols="77" rows="10" maxlength="3000" minlength="10" placeholder="Опишите вашу проблему" required></textarea>
                     <button><input type="button" name="send" id="send_button" value="Отправить"></button>
