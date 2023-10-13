@@ -185,6 +185,7 @@ section > iframe{
 
 .gallery{
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .img{
@@ -194,7 +195,7 @@ section > iframe{
     height: auto;
     display: inline-block;
     overflow: hidden;
-}
+} 
 
 .img img{
     border-radius: 10px;
@@ -310,4 +311,3 @@ section > iframe{
         width: 100%;
     }
 }
-
