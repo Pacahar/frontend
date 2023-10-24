@@ -3,11 +3,12 @@
     color: rgb(255, 241, 233);
     padding: 0;
     margin: 0;
+    --grey-background: #222831;
 }
 
 body{
     height: 100%;
-    background-color: #222831;
+    background-color: var(--grey-background);
 }
 
 strong{
@@ -15,7 +16,6 @@ strong{
 }
 
 .page{
-    border: solid 2px rgb(255, 0, 0);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -92,6 +92,10 @@ strong{
     display: flex;
     align-items: center;
     padding: 8px 8px;
+}
+
+.header nav img{
+  filter: grayscale(80%);
 }
 
 .menu{
@@ -363,8 +367,8 @@ main{
   }
 
   .cards1, .cards2, .cards3{
-    padding: 2rem;
-    margin: 2rem;
+    padding: calc(20px + 1rem);
+    margin: calc(20px + 1rem);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
