@@ -17,8 +17,7 @@ strong{
 
 .page{
     overflow: hidden;
-    display: flex;
-    flex-direction: column;
+    display: grid;
     min-height: 100vh;
 }
 
@@ -133,26 +132,29 @@ strong{
 
 main{
     padding-top: 100px;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 15fr 70fr 15fr;
+    grid-template-areas: "left content right";
     justify-content: center;
     align-items: center;
     position: relative;
 }
 
 .form{
-    width: fit-content;
-    height: fit-content;
-    top: 250px;
-    margin-left: calc(fit-content / -2);
-    padding: 100px;
-    display: grid;
-    grid-template-columns: 2fr 3fr;
-    background: #1f1f1f;
-    flex-direction: column;
-    align-items: start;
-    backdrop-filter: blur(5px);
-    border-radius: 5px;
+  place-self: center;
+  grid-area: content;
+  width: fit-content;
+  height: fit-content;
+  top: 250px;
+  margin-left: calc(fit-content / -2);
+  padding: 100px;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  background: #1f1f1f;
+  flex-direction: column;
+  align-items: start;
+  backdrop-filter: blur(5px);
+  border-radius: 5px;
 }
 
 .form h3{
@@ -208,15 +210,19 @@ main{
     display: none;
 }
 
+.content{
+  grid-area: content;
+}
+
 .cards{
-    padding: 2rem;
-    text-align: center;
+  padding: 2rem;
+  text-align: center;
 }
 
 .cards .card{
     position: relative;
     padding: .5em;
-    max-width: 34rem;
+    max-width: 30rem;
     display: inline-block;
     margin: 5%;
     background-color: #d0d0d0;
@@ -352,198 +358,10 @@ main{
     box-shadow:  6px 6px 6px 0 rgba(0, 0, 0, 0.5)
   }
 
-  .cards1, .cards2, .cards3{
-    padding: calc(20px + 1rem);
-    margin: calc(20px + 1rem);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    border: solid white 2px;
-  }
-
-  .cards1 .card, .cards2 .card, .cards3 .card{
-    margin: 20px;
-    height: 500px;
-    width: 400px;
-  }
-
-  .cards1 .card{
-    padding: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-  }
-
-  .cards1 .card_text{
-    min-height: 60%;
-    max-width: 90%;
-    padding: 30px;
-    background-color: #ffffff70;
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    cursor: pointer;
-  }
-
-  .cards1 .gradient{
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 30%;
-    right:30%;
-    background: linear-gradient(45deg, orange, purple);
-    border-radius: 5px;
-    transform: skewX(15deg);
-    transition: .5s;
-  }
-
-  .cards1 .card:hover .gradient{
-    transform: skew(0);
-  }
-  
-  .cards1 .card:hover .card_text::before{
-    content: "";
-    position: absolute;
-    top: -100px;
-    left: 50px;
-    width: 3vw;
-    height: 3vw;
-    background-color: #ffffff70;
-    backdrop-filter: blur(5px);
-    border-radius: 15px;
-    animation: anim1 .3s linear;
-  }
-  
-  .cards1 .card:hover .card_text::after{
-    content: "";
-    position: absolute;
-    bottom: -5vw;
-    left: 5vw;
-    width: 4vw;
-    height: 4vw;
-    background-color: #ffffff70;
-    filter: blur(2px);
-    border-radius: 15px;
-    animation: anim2 .3s linear;
-  }
-
-  .cards2 .blur{
-    display: none;
-  }
-
-  .cards2 .card{
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    min-height: 60%;
-    max-width: 90%;
-    background: linear-gradient(170deg, white 70%, gray);
-    border-radius: 15px;
-    transition: 0.5s;
-  }
-
-
-  .cards2 .card:hover{
-    z-index: 99;
-    transform: scale(1.1);
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.212);
-  }
-
-  .cards2 .card:hover ~ .blur{
-    display: block;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    content: "";
-    position: fixed;
-    backdrop-filter: blur(3px);
-  }
-
-  .cards2 .card *{
-    color: black;
-  }
-
-  .cards2 .card h3{
-    margin: 40px;
-  }
-
-
-  .cards3 .blur{
-    position: fixed;
-    opacity: 0;
-    transition: 0.5s;
-  }
-
-  .cards3 .card:hover{
-    z-index: 100;
-  }
-
-  .cards3 .card .card_text{
-    filter: brightness(80%);
-  }
-
-  .cards3 .card:hover .card_text{
-    filter: brightness(100%);
-  }
-
-  .cards3 .card:hover ~ .blur{
-    z-index: 99;
-    display: block;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    right: 0;
-    content: "";
-    background-color: #222831;
-    opacity: 0.5;
-  }
-
-  .cards3 .card:hover .gradient{
-    opacity: 1;
-    animation: rotate 4s linear infinite forwards;
-    transform: rotate(135deg);
-  }
-
-  .cards3 .card{
-    z-index: 98;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 15px;
-  }
-
-  .cards3 .card_text{
-    z-index: 99;
-    height: 98%;
-    width: 98%;
-    background: linear-gradient(170deg, rgb(46, 49, 77) 30%, rgb(16, 8, 48));
-    border-radius: 15px;
-    cursor: pointer;
-  }
-
-  .cards3 .card_text *{
-    padding: 20px;
-  }
-
-  .cards3 .gradient{
-    position: absolute;
-    top:-100px;
-    bottom: -100px;
-    left: 25%;
-    right: 25%;
-    background: linear-gradient(60deg, orange, purple);
-    border-radius: 5px;
-    
-    opacity: 0;
-  }
-
   
 .gallery{
   display: grid;
+  grid-area: content;
   grid-auto-flow: dense;
   grid-template-columns: repeat(4, 1fr);
   box-sizing: border-box;
