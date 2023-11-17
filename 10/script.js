@@ -1,7 +1,7 @@
 "use strict"
 
 
-
+//Форма для регистрации
 function onReg(){
     var choice = prompt("Желаете пройти регистрацию на сайте?");
     if (choice == "Да"){
@@ -12,6 +12,7 @@ function onReg(){
     }
 }
 
+//Форма для логина 
 function onLog(){
     var login = prompt("Введите ваш логин:");
         if (login == "Админ"){
@@ -35,6 +36,7 @@ function onLog(){
         }
 }
 
+//Кнопка лайка с рисовалкой
 function like(btn){
     if (btn.style.backgroundColor == "red"){
         btn.style.backgroundColor = "white";
@@ -65,10 +67,12 @@ function like(btn){
     }
 }
 
+//Рандом
 function getRandomInt(max) {
     return Math.floor(Math.random() * max);
 }
 
+//Капча
 function generate_captcha(){
     let task = document.getElementsByClassName("task")[0];
 
@@ -106,6 +110,7 @@ function generate_numeric_captcha(){
 
     task.textContent = first + "+" + second;
     console.log(task);
+
     answer_field.onblur = function(){
         let answ = document.getElementById("answer");
         if (answ.value == answer_value){
@@ -120,6 +125,7 @@ function generate_numeric_captcha(){
     }
 }
 
+//Сокращение карточек
 function short_cards(){
     for (let i = 0; i < document.getElementsByClassName("main_text").length; i++){
         let text_elem = document.getElementsByClassName("main_text")[i];
@@ -130,6 +136,23 @@ function short_cards(){
     }
 }
 
-    
+//Корзина
+function Accumulator(value) {
+    this.value = value;
+
+    this.read = function () {
+        let price = prompt();
+        this.value += Number(price);
+        console.log(this.value);
+        let basket = document.getElementById("count");
+        console.log(basket);
+        basket.textContent = this.value;
+    };
+}
+let type = new Accumulator(0);
+
+function add() {
+    type.read();
+}
 
 

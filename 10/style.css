@@ -238,6 +238,20 @@ main{
   font-weight: bold;
 }
 
+.card{
+  padding: 25px;
+  background-color: #1f1f1f;
+  border-radius: 3px;
+}
+
+.card button{
+  margin-top: 20px;
+  padding: 5px;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+}
+
 .burger, .burger + label{
     display: none;
 }
