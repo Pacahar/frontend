@@ -17,7 +17,7 @@ function addToCart(name, price){
         }
     }
     cartItems.push(a);
-    console.log("123");
+    
     refreshCart();
 }
 
@@ -38,8 +38,7 @@ function removeFromCart(name){
 }
 
 function refreshCart(){
-    let cart = document.getElementsByClassName('cart')[0];
-    console.log(cart);
+    let cart = document.getElementsByClassName('cart')[0]
 
     bubbleSort(cartItems);
 
@@ -60,7 +59,7 @@ function refreshCart(){
 
         let price = document.createElement("p");
         price.className = "price";
-        price.textContent = item.price * item.count;
+        price.textContent = item.price * item.count + "₽";
 
         let delBtn = document.createElement("input");
         delBtn.type = "button";
@@ -90,7 +89,6 @@ function refreshCart(){
 
 function clearCart(){
     cartItems = [];
-    console.log(123);
     refreshCart();
 }
 
@@ -105,3 +103,40 @@ function bubbleSort(arr) {
       }
     }
   }
+
+var arr = [];
+
+function addValue(value){
+arr.push(value);
+refreshArr();
+}
+
+function refreshArr(){
+
+    let ans = document.getElementsByClassName('answer')[0];
+
+    while(ans.firstChild){
+        ans.removeChild(ans.firstChild);
+    }
+
+    for (let value of arr){
+        let node = document.createElement("div");
+        node.textContent = value;
+        ans.appendChild(node);
+    }
+}
+
+function filt(){
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    console.log(from, to)
+
+    let newArr = []
+    for (let value of arr){
+        if (value >= from && value <= to){
+            newArr.push(value);
+        }
+    }
+    arr = newArr;
+    refreshArr();
+}

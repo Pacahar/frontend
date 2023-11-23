@@ -3,7 +3,6 @@
     justify-content: center;
     display: flex;
     flex-direction: row;
-    border: 5px solid black;
 }
 
 .items .item{
@@ -50,7 +49,6 @@
 }
 
 .cart {
-    border: 2px solid black;
     width: 50%;
     justify-content: center;
     display: flex;
@@ -82,10 +80,6 @@
     font-weight: bold;
 }
 
-.cart .price{
-
-}
-
 .cart .item input{
     border: 1px solid grey;
     font-size: large;
@@ -94,4 +88,44 @@
     border-radius: 50%;
     width: 30px;
     height: 30px;
+}
+
+.arr {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+}
+
+.arr input{
+    color: black;
+    margin: 5px;
+}
+
+.btns *{
+    margin: 10px;
+    width:80px;
+    height:80px;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+}
+
+.answer{
+    display: flex;
+    flex-direction: row;
+}
+
+.answer * {
+    background-color: white;
+    text-align: center;
+    margin: 10px;
+    width:40px;
+    height:40px;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 5px;
 }
