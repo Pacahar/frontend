@@ -40,7 +40,9 @@ function removeFromCart(name){
 function refreshCart(){
     let cart = document.getElementsByClassName('cart')[0]
 
-    bubbleSort(cartItems);
+    //bubbleSort(cartItems);
+    cartItems.sort(compareObjects)
+    cartItems.reverse()
 
     while (cart.firstChild) {
         cart.removeChild(cart.firstChild);
@@ -92,17 +94,23 @@ function clearCart(){
     refreshCart();
 }
 
-function bubbleSort(arr) {
-    for (let j = arr.length - 1; j > 0; j--) {
-      for (let i = 0; i < j; i++) {
-        if (arr[i].name > arr[i + 1].name) {
-          let temp = arr[i];
-          arr[i] = arr[i + 1];
-          arr[i + 1] = temp;
-        }
-      }
-    }
-  }
+function compareObjects(a, b){
+    if (a.count > b.count) return 1;
+    if (a. count == b.count) return 0;
+    if (a.count < b.count) return -1;
+}
+
+// function bubbleSort(arr) {
+//     for (let j = arr.length - 1; j > 0; j--) {
+//       for (let i = 0; i < j; i++) {
+//         if (arr[i].name > arr[i + 1].name) {
+//           let temp = arr[i];
+//           arr[i] = arr[i + 1];
+//           arr[i + 1] = temp;
+//         }
+//       }
+//     }
+//   }
 
 var arr = [];
 
@@ -131,12 +139,15 @@ function filt(){
     let to = document.getElementById("to").value;
     console.log(from, to)
 
-    let newArr = []
-    for (let value of arr){
-        if (value >= from && value <= to){
-            newArr.push(value);
-        }
-    }
-    arr = newArr;
+    // let newArr = []
+    // for (let value of arr){
+    //     if (value >= from && value <= to){
+    //         newArr.push(value);
+    //     }
+    // }
+    // arr = newArr;
+
+    arr = arr.filter(item => item >= from && item <= to)
+
     refreshArr();
 }
