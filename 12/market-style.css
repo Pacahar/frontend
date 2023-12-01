@@ -1,0 +1,116 @@
+.ntfs{
+    z-index: 50;
+    padding: 0;
+    position: fixed;
+    top: 100px;
+    right: 30px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.ntfs:hover{
+    background-color: #BFC0C0;
+    border-radius: 25px;
+}
+
+#counter{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.ntfs div{
+    position: absolute;
+    right: 70px;
+    top: 17px;
+    color: rgb(126, 126, 126);
+    font-weight: bold;
+}
+
+.ntfs > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    right: 0;
+}
+
+.ntfs:hover > img{
+    position: absolute;
+    animation: left-center;
+    animation-duration: 1s;
+}
+
+.ntfs ul {
+    padding: 0;
+    list-style: none;
+    display: none;
+}
+
+.ntfs:hover ul{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ntfs li{
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: 10rem;
+}
+
+.ntfs li:hover{
+    background-color: #203363;
+}
+
+/* Список */
+.list_handler{
+    display: grid;
+    grid-template-rows: 5fr 1fr;
+    grid-template-columns: 1fr;
+    place-items: center;
+    min-width: 60%;
+}
+
+.list_handler ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list_handler input{
+    width: 50px;
+    height: 50px;
+    border-radius: 20px;
+    border: solid 1px black;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.list_handler input:active{
+    background-color: lightgray;
+}
+
+.list_handler .list li{
+    list-style: none;
+    width: fit-content;
+    height: 50px;
+    margin: 20px;
+}
+
+.ntfsbtn{
+    margin: 100px;
+    width: 150px;
+    height: 50px;
+    border-radius: 20px;
+    border: solid 1px black;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.ntfsbtn:active{
+    background-color: lightgray;
+}
