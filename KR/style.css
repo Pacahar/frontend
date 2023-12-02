@@ -1,0 +1,201 @@
+* {
+	vertical-align: baseline;
+	font-weight: 'Montserrat';
+	font-family: 'Montserrat', sans-serif;
+	font-style: 'Montserrat';
+	font-size: 100%;
+	border: 0 none;
+	outline: 0;
+	padding: 0;
+	margin: 0;
+	--background-balck: #131313;
+}
+
+
+ul{
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: var(--background-balck);
+}
+
+.body {
+	height: 100%;
+}
+
+.page {
+	overflow: hidden;
+	min-height: 100vh;
+	background-color: var(--background-blck);
+	color: black;
+}
+
+/* Хедер */
+header {
+	display: flex;
+	position: fixed;
+	top:0;
+	left: 0;
+	right: 0;
+	height: 8%;
+	background-color: white;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 8%;
+}
+
+header .logo{
+	font-size: 3.5vh;
+	line-height: 3.8vh;
+	display: flex;
+	flex-direction: row;
+}
+
+header .logo img {
+	height: 8vh;
+}
+
+header .nav {
+	display: flex;
+	width: auto;
+	height: 100%;
+}
+
+header .nav li{
+	display: flex;
+	position: relative;
+	height: 100%;
+	align-items:center;
+	justify-content:center;
+}
+
+header .nav li:hover{
+	background-color: #1313131a;
+}
+
+header .nav li a{
+	padding: 16px 1.5vw;
+	font-size: 2vmin;
+	font-weight: bold;
+	width: fit-content;
+}
+/* Адаптив под телефон */
+@media screen and (max-width: 1000px){
+	
+}
+
+/* Мэйн */
+main {
+	background-color: var(--background-balck);
+	min-height: 100vh;
+	padding: 8vh 0;
+}
+
+/* О проекте */
+main .about{
+	background-image: url('img/smoke.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: top;
+	color: white;
+	overflow: hidden;
+}
+
+main .about h1{
+	font-size: 2rem;
+}
+
+main .about > *{
+	margin: 1em 20%;
+}
+
+/* Новости */
+main .news {
+	padding: 2% 0;
+	margin: 0 20%;
+	background-color: white;
+}
+
+main .news h1{
+	margin-left: 5%;
+	font-size: 2rem;
+}
+
+main .news .slider{
+	position: relative;
+}
+
+main .news .item {
+	margin: 5% 15%;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+}
+
+main .news .prev, main .news .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+main .news .next{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* Футер */
+footer {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	background-color: aliceblue;
+	min-height: 10vh;
+}
+
+footer a{
+	text-decoration: underline solid black 1px;
+	text-underline-position: below;
+}
+
+footer > * {
+	padding: 5%;
+}
+
+footer .faq{
+	grid-column: 2;
+}
+
+footer .social{
+	display: flex;
+	flex-direction: column;
+	align-items: baseline;
+}
+
+footer .social > * {
+	padding: 2px 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50px;
+	overflow: hidden;
+	position: relative;
+	transition: .5s;
+	cursor: pointer
+}
+
+footer .social > *:hover{
+	background-color: #0000001c;
+	transition: .5s;
+}
+
+footer .social > * > * {
+	margin: 5px;
+}
