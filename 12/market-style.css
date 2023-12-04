@@ -7,7 +7,8 @@
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: auto;
+    max-height: 50%;
 }
 
 .ntfs:hover{
@@ -17,16 +18,17 @@
 
 #counter{
     position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 18px;
+    right: 18px;
 }
 
 .ntfs div{
     position: absolute;
-    right: 70px;
-    top: 17px;
+    right: 60px;
+    top: 20px;
     color: rgb(126, 126, 126);
     font-weight: bold;
+    font-size: .7rem;
 }
 
 .ntfs > img{

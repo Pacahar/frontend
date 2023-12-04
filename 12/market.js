@@ -94,23 +94,9 @@ function clearCart(){
 
   //12 прака
 
-let ntfsPaused = false;
-
-setInterval(addNotification, 15000);
-
-function pauseNtfs() {
-    console.log("Pause")
-    ntfsPaused = true;
-    setTimeout(() => {ntfsPaused = false;}, 10000);
-}
-
-function addCounter(){
-    let counter = document.getElementById("counter");
-    counter.textContent = 1 + Number(counter.textContent);
-}
+let interval = setInterval(action, 3000);
 
 function addNotification(){
-    if (ntfsPaused){return;}
     let list = document.getElementsByClassName("list")[0];
     let newNtfs = document.createElement("li");
     newNtfs.textContent = "Lorem";
@@ -118,15 +104,53 @@ function addNotification(){
     addCounter();
 }
 
+let ntfsPaused = false;
+let addNotification1000 = delay(addNotification, 10000);
+
+function pauseNtfs() {
+    console.log("Pause")
+    ntfsPaused = true;
+}
+
+function delay(f, ms) {
+    console.log("Decorator works");
+    return function() {setTimeout(() => {
+        f.apply(this, arguments);
+        interval = setInterval(action, 3000);
+    }, ms);
+    };
+}
+
+function action(){
+    if (!ntfsPaused){
+        console.log("with out delay");
+        addNotification();
+    }
+    else{
+        clearInterval(interval);
+        console.log("with delay");
+        addNotification1000();
+        ntfsPaused = false;
+    }
+}
+
+function addCounter(){
+    let counter = document.getElementById("counter");
+    counter.textContent = 1 + Number(counter.textContent);
+}
+
 // Cписок
 
 function addLi(){
     let text = prompt("Введите текст:");
-    let ul = document.getElementsByClassName("list")[1];
-    let li = document.createElement("li");
-    li.textContent = text;
-    ul.appendChild(li);
-    console.log(ul, li, text);
+    while (text != null && text != ""){    
+        let ul = document.getElementsByClassName("list")[1];
+        let li = document.createElement("li");
+        li.textContent = text;
+        ul.appendChild(li);
+        console.log(ul, li, text);
+        text = prompt("Введите текст:");
+    }
 }
 
 // Уведомление
