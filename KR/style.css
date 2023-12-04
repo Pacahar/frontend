@@ -44,6 +44,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0 8%;
+	border-bottom: .5px solid lightgrey;
 }
 
 header .logo{
@@ -114,7 +115,7 @@ main .about > *{
 /* Новости */
 main .news {
 	padding: 2% 0;
-	margin: 0 20%;
+	margin: 1% 20%;
 	background-color: white;
 }
 
@@ -128,13 +129,24 @@ main .news .slider{
 }
 
 main .news .item {
-	margin: 5% 15%;
+	margin: 5% 10%;
+	gap: 20px;
 	display: grid;
 	grid-template-columns: 2fr 3fr;
+	height: 30vh;
+	transition: 0.5s;
+}
+
+main .news .item img {
+	max-width: 90%;
+	max-height: 90%;
+	align-self: top;
+	justify-self: center;
 }
 
 main .news .prev, main .news .next {
 	cursor: pointer;
+	user-select: none;
 	position: absolute;
 	top: 50%;
 	width: auto;
