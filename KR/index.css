@@ -1,0 +1,150 @@
+/* О проекте */
+main .about{
+	padding: 3rem 20%;
+	background-image: url('img/smoke.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: top;
+	color: white;
+	overflow: hidden;
+}
+
+main .about h1{
+	font-size: 2rem;
+}
+
+main .about > *{
+	margin: 1rem 0;
+}
+
+/* Общие факты */
+
+main .overview{
+	padding: 3rem 0;;
+	margin: 20px 31%;
+	color: white;
+}
+
+main .overview h1{
+	font-size: 2rem;
+}
+
+main .overview > *{
+	margin: 1rem 0;
+}
+
+/* Новости */
+main .news {
+	padding: 2% 20%;
+	margin: 1% 0;
+	background-color: white;
+} 
+
+main .news h1{
+	margin-left: 5%;
+	font-size: 2rem;
+}
+
+main .news .slider{
+	position: relative;
+}
+
+main .news .item {
+	margin: 5% 10%;
+	overflow: auto;
+	gap: 20px;
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+	height: 30vh;
+	transition: 0.5s;
+}
+
+main .news .item::-webkit-scrollbar{
+	display: none;
+}
+
+main .news .item img {
+	max-width: 90%;
+	max-height: 90%;
+	align-self: top;
+	justify-self: center;
+}
+
+main .news .prev, main .news .next {
+	cursor: pointer;
+	user-select: none;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: black;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+}
+
+main .news .next{
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* Посетите так же */
+
+main .also-check{
+	padding: 20px 20%;
+	color: white;
+}
+
+main .also-check h1{
+	font-size: 2rem;
+}
+
+.cards{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+  }
+
+.cards .card{
+	margin: 20px;
+	height: 150px;
+	width: 120px;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	background: linear-gradient(170deg, white 70%, gray);
+	border-radius: 15px;
+	transition: 0.1s;
+	justify-content: center;
+	text-align: center;
+	text-shadow: 0px 0px 5px lightblue;
+  }
+
+.cards .card:hover{
+	z-index: 99;
+	transform: scale(1.1);
+	box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.212);
+}
+
+.cards .blur{
+    display: none;
+}
+
+.cards .card:hover ~ .blur{
+  display: block;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  backdrop-filter: blur(3px);
+  z-index: 98;
+}
+
+.cards .card *{
+  color: black;
+  user-select: none;
+}

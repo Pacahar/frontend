@@ -1,0 +1,121 @@
+.part{
+    min-height: 50vh;
+    min-width: 100vw;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgb(17, 62, 121);
+}
+
+input {
+    color:black;
+    font-size: 1.5rem;
+    margin:10px;
+    width: 40px;
+    height: 40px;
+}
+
+/* Второе задание */
+
+.ntfs{
+    z-index: 50;
+    padding: 0;
+    position: absolute;
+    top: 100px;
+    right: 30px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    max-height: 50%;
+}
+
+.ntfs:hover{
+    background-color: #BFC0C0;
+    border-radius: 25px;
+}
+
+#counter{
+    position: absolute;
+    top: 18px;
+    right: 18px;
+}
+
+.ntfs div{
+    position: absolute;
+    right: 60px;
+    top: 20px;
+    color: rgb(126, 126, 126);
+    font-weight: bold;
+    font-size: .7rem;
+}
+
+.ntfs > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    right: 0;
+}
+
+.ntfs:hover > img{
+    position: absolute;
+    animation: left-center;
+    animation-duration: 1s;
+}
+
+.ntfs ul {
+    padding: 0;
+    list-style: none;
+    display: none;
+}
+
+.ntfs:hover ul{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ntfs li{
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    width: 10rem;
+}
+
+.ntfs li:hover{
+    background-color: #203363;
+}
+
+/* Третье задание */
+
+#third{
+    width: 100%;
+    overflow: hidden;
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgScroll {
+    display: block;
+    object-fit: cover;
+    width: 300px;
+    transition: all 0.01s ease;
+    position: absolute;
+}
+
+/* Четвертое задание */
+
+.lab4img {
+    opacity: 0;
+    border-radius: 10px;
+    height: 20vh;
+    margin: 20px;
+    margin-left: 50%;
+    transition: all 1s ease;
+}
+
+.lab4img.active {
+    opacity: 1;
+}
