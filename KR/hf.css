@@ -44,11 +44,11 @@ header {
 	background-color: white;
 	justify-content: space-between;
 	align-items: center;
-	padding: 0 8%;
 	border-bottom: .5px solid lightgrey;
 }
 
 header .logo{
+	margin-left: 8%;
 	font-size: 3.5vh;
 	line-height: 3.8vh;
 	display: flex;
@@ -59,13 +59,13 @@ header .logo img {
 	height: 8vh;
 }
 
-header .nav {
+header > .nav {
 	display: flex;
 	width: auto;
 	height: 100%;
 }
 
-header .nav li{
+header > .nav li{
 	display: flex;
 	position: relative;
 	height: 100%;
@@ -73,23 +73,89 @@ header .nav li{
 	justify-content:center;
 }
 
-header .nav li:hover{
+header > .nav li:hover{
 	background-color: #1313131a;
 }
 
-header .nav li a{
+header > .nav li a{
 	padding: 16px 1.5vw;
 	font-size: 2vmin;
 	font-weight: bold;
 	width: fit-content;
 }
+
+header #burgbtn{
+	padding: 3vh;
+	margin-right: 50px;
+	display: none;
+	background-color: white;
+	font-size: 1.5vh;
+	font-weight: bold;
+	border-radius: 15px;
+}
+
+header .burger{
+	z-index: 100;
+	display: flex;
+	position: fixed;
+	top:0;
+	bottom: 0;
+	right: 0;
+	/* to 30% */
+	left: 100%;
+	background-color: whitesmoke;
+	transition: .3s;
+}
+
+header .other{
+	z-index: 10;
+	position:fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0; 
+	display: none;
+	opacity: 0;
+	backdrop-filter: blur(2px);
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: .5s;
+}
+
+header .burger .nav{
+	margin: 5% 15%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: calc(70vw / 12);
+	font-weight: bold;
+}
+
+header .burger .nav a{
+	padding: 1rem;
+	border-radius: 15px;
+	user-select: none;
+}
+
+header .burger .nav a:active{
+	background-color: #1313131a;
+}
+
+
 /* Адаптив под телефон */
-@media screen and (max-width: 1000px){
-	
+@media screen and (max-width: 700px){
+	header .nav{
+		display: none;
+	}
+
+	header #burgbtn{
+		display: inline;
+	}
 }
 
 /* Мэйн */
 main {
+	display: flex;
+	flex-direction: column;
 	background-color: var(--background-balck);
 	min-height: 100vh;
 	padding: 8vh 0;
@@ -141,4 +207,22 @@ footer .social > *:hover{
 
 footer .social > * > * {
 	margin: 5px;
+}
+
+/* Адаптив под телефон */
+@media screen and (max-width: 700px){
+	footer {
+		font-size: 1.5rem;
+		display: flex;
+		flex-direction: column;
+	}
+
+	footer .social{
+		align-items: center;
+		justify-content: center;
+	}
+
+	footer .social > *{
+		padding: 25px;
+	}
 }

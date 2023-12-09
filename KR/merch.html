@@ -4,9 +4,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
+        <script src="merch.js"></script>
+        <script src="burger.js"></script>
         <link rel="stylesheet" href="hf.css">
-        <link rel="stylesheet" href="merch.css.css">
+        <link rel="stylesheet" href="merch.css">
         <title>Solar system</title>
         <link rel="icon" href="favicon.ico" sizes="any">
     </head>
@@ -22,11 +23,81 @@
                     <li><a href="./merch.html">Мерч</a></li>
                     <li><a href="./auth.html">Войти</a></li>
                 </ul>
+
+                <input type="button" value="☰" id="burgbtn" onclick="changeBurg()">
+                <div class="other" onclick="changeBurg()"></div>
+                <div class="burger">
+                    <div class="nav">
+                        <a href="./index.html">Главная</a>
+                        <a href="./planets.html">Планеты</a>
+                        <a href="./asteroids.html">Астероиды</a>
+                        <a href="./merch.html">Мерч</a>
+                        <a href="./auth.html">Войти</a>
+                    </div>
+                </div>
             </header>
 
 <!--Мэйн-->
             <main>
-                
+                <section class="market">
+                    <h1>Католог товаров</h1>
+                    <div class="items">
+                        <div class="item" id="shirt1">
+                            <img src="./img/merch/1.jpg" alt="Футболка" class="img">
+                            <p class="name">Футболка</p>
+                            <input type="button" value="+" onclick="addToCart(this.parentElement)">
+                            <p class="price">2000</p>
+                        </div>
+                        
+                        <div class="item" id="cup1">
+                            <img src="./img/merch/2.jpg" alt="Кружка" class="img">
+                            <p class="name">Кружка</p>
+                            <input type="button" value="+" onclick="addToCart(this.parentElement)">
+                            <p class="price">700</p>
+                        </div>
+                        
+                        <div class="item" id="cup2">
+                            <img src="./img/merch/3.jpg" alt="Кружка" class="img">
+                            <p class="name">Кружка</p>
+                            <input type="button" value="+" onclick="addToCart(this.parentElement)">
+                            <p class="price">1000</p>
+                        </div>
+                        
+                        <div class="item" id="globus">
+                            <img src="./img/merch/4.jpg" alt="Глобус" class="img">
+                            <p class="name">Глобус</p>
+                            <input type="button" value="+" onclick="addToCart(this.parentElement)">
+                            <p class="price">1500</p>
+                        </div>
+                        
+                        <div class="item" id="shirt2">
+                            <img src="./img/merch/5.jpg" alt="Футболка" class="img">
+                            <p class="name">Футболка</p>
+                            <input type="button" value="+" onclick="addToCart(this.parentElement)">
+                            <p class="price">2500</p>
+                        </div>
+                        
+                        <div class="item" id="shirt3">
+                            <img src="./img/merch/6.jpg" alt="Футболка" class="img">
+                            <p class="name">Футболка</p>
+                            <input type="button" value="+" onclick="addToCart(this.parentElement)">
+                            <p class="price">2500</p>
+                        </div>
+                        
+                        <div class="item" id="hoodie">
+                            <img src="./img/merch/7.jpg" alt="Толстовка" class="img">
+                            <p class="name">Толстовка</p>
+                            <input type="button" value="+" onclick="addToCart(this.parentElement)">
+                            <p class="price">4000</p>
+                        </div>
+                        
+                    </div>
+                </section>
+
+                <section class="cart-wrap">
+                    <div class="cart"></div>
+                    <input type="button" value="🗑️" onclick="clearCart()">
+                </section>
             </main>
 
 <!-- Футер -->

@@ -5,6 +5,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
         <script src="index.js"></script>
+        <script src="burger.js"></script>
         <link rel="stylesheet" href="hf.css">
         <link rel="stylesheet" href="index.css">
         <title>Solar system</title>
@@ -22,6 +23,18 @@
                     <li><a href="./merch.html">Мерч</a></li>
                     <li><a href="./auth.html">Войти</a></li>
                 </ul>
+
+                <input type="button" value="☰" id="burgbtn" onclick="changeBurg()">
+                <div class="other" onclick="changeBurg()"></div>
+                <div class="burger">
+                    <div class="nav">
+                        <a href="./index.html">Главная</a>
+                        <a href="./planets.html">Планеты</a>
+                        <a href="./asteroids.html">Астероиды</a>
+                        <a href="./merch.html">Мерч</a>
+                        <a href="./auth.html">Войти</a>
+                    </div>
+                </div>
             </header>
 
             <!--Мэйн-->

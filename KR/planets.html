@@ -4,7 +4,8 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
+        <script src="planets.js"></script>
+        <script src="burger.js"></script>
         <link rel="stylesheet" href="hf.css">
         <link rel="stylesheet" href="planets.css">
         <title>Планеты</title>
@@ -13,30 +14,42 @@
     <body onload="afterLoad()">
         <div class="page">
         <!-- Хедер -->
-            <header>
-                <a href="./index.html" class="logo"><img src="./img/logo.png" alt="LOGO" ><p>Solar<br>System</p></a>
-                <ul class="nav">
-                    <li><a href="./index.html">Главная</a></li>
-                    <li><a href="./planets.html">Планеты</a></li>
-                    <li><a href="./asteroids.html">Астероиды</a></li>
-                    <li><a href="./merch.html">Мерч</a></li>
-                    <li><a href="./auth.html">Войти</a></li>
-                </ul>
-            </header>
+        <header>
+            <a href="./index.html" class="logo"><img src="./img/logo.png" alt="LOGO" ><p>Solar<br>System</p></a>
+            <ul class="nav">
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./planets.html">Планеты</a></li>
+                <li><a href="./asteroids.html">Астероиды</a></li>
+                <li><a href="./merch.html">Мерч</a></li>
+                <li><a href="./auth.html">Войти</a></li>
+            </ul>
+
+            <input type="button" value="☰" id="burgbtn" onclick="changeBurg()">
+            <div class="other" onclick="changeBurg()"></div>
+            <div class="burger">
+                <div class="nav">
+                    <a href="./index.html">Главная</a>
+                    <a href="./planets.html">Планеты</a>
+                    <a href="./asteroids.html">Астероиды</a>
+                    <a href="./merch.html">Мерч</a>
+                    <a href="./auth.html">Войти</a>
+                </div>
+            </div>
+        </header>
 
 
         <!--Мэйн-->
-            <main>
+            <main id="main">
                 <section class="planets">
                     <h1>Планеты по порядку</h1>
-                    <div class="planet" id="mercury"><img src="./img/card_mercury.png" alt=""><h1>Меркурий</h1><div class="text"><p>Самая близкая к Солнцу планета в Солнечной Системе.</p><p>Имеет самую короткую орбитальную дугу, занимающую всего 88 земных дней для полного обращения вокруг Солнца.</p><p>Дневная температура может достигать до 430°C из-за отсутствия атмосферы.</p></div></div>
-                    <div class="planet" id="venus"><img src="./img/card_venus.png" alt=""><h1>Венера</h1><div class="text"><p>Имеет самую плотную атмосферу с высоким содержанием углекислого газа.</p><p>Венера вращается в направлении, противоположном остальным планетам.</p><p>Ее поверхность скрыта густыми облаками серной кислоты.</p></div></div>
-                    <div class="planet" id="earth"><img src="./img/card_earth.png" alt=""><h1>Земля</h1><div class="text"><p>Единственная планета, на которой известно существование жизни.</p><p>71% ее поверхности покрыто водой.</p><p>Полностью обращается вокруг своей оси за примерно 24 часа, что определяет длину суток.</p></div></div>
-                    <div class="planet" id="mars"><img src="./img/card_mars.png" alt=""><h1>Марс</h1><div class="text"><p>Имеет самую высокую гору в Солнечной Системе - вулкан Олимп, высота которого превышает 21 километр.</p><p>Обладает атмосферой, состоящей в основном из углекислого газа.</p><p>Имеет ледяные полярные шапки, которые могут изменяться в размерах в зависимости от сезона.</p></div></div>
-                    <div class="planet" id="jupiter"><img src="./img/card_jupiter.png" alt=""><h1>Юпитер</h1><div class="text"><p>Самая крупная планета в Солнечной Системе.</p><p>Обладает большею количеством спутников, чем у любой другой планеты - более 79 известных на данный момент.</p><p>Обладает огромным магнитным полем, которое создает мощные радиоизлучения.</p></div></div>
-                    <div class="planet" id="saturn"><img src="./img/card_saturn.png" alt=""><h1>Сатурн</h1><div class="text"><p>Имеет кольца, состоящие изо льда, камней и пыли.</p><p>Сатурн также обладает уникальной системой спутников, среди которых самый большой - Титан, имеющий атмосферу и океаны из жидкого метана и этана.</p><p>Его плотность невысока, поэтому он мог бы плавать в океане, если бы такой огромный океан был.</p></div></div>
-                    <div class="planet" id="uranus"><img src="./img/card_uranus.png" alt=""><h1>Уран</h1><div class="text"><p>Вращается на боку, что делает его ось вращения горизонтальной относительно орбиты.</p><p>Имеет ледяной оболочку, скрывающуюся под атмосферой водорода и гелия.</p><p>Уран обладает кольцами, хотя они гораздо менее заметны, чем у Сатурна.</p></div></div>
-                    <div class="planet" id="neptune"><img src="./img/card_neptune.png" alt=""><h1>Нептун</h1><div class="text"><p>Самая холодная планета в Солнечной Системе.</p><p>Имеет самую высокую скорость ветра среди всех планет - около 2000 км/ч.</p><p>Обладает кольцами, состоящими из льда, пыли и газа.</p></div></div>
+                    <div class="planet active" id="mercury"><h1>Меркурий</h1><img src="./img/card_mercury.png" alt=""><div class="text"><p>Самая близкая к Солнцу планета в Солнечной Системе.</p><p>Имеет самую короткую орбитальную дугу, занимающую всего 88 земных дней для полного обращения вокруг Солнца.</p><p>Дневная температура может достигать до 430°C из-за отсутствия атмосферы.</p></div></div>
+                    <div class="planet" id="venus"><h1>Венера</h1><img src="./img/card_venus.png" alt=""><div class="text"><p>Имеет самую плотную атмосферу с высоким содержанием углекислого газа.</p><p>Венера вращается в направлении, противоположном остальным планетам.</p><p>Ее поверхность скрыта густыми облаками серной кислоты.</p></div></div>
+                    <div class="planet" id="earth"><h1>Земля</h1><img src="./img/card_earth.png" alt=""><div class="text"><p>Единственная планета, на которой известно существование жизни.</p><p>71% ее поверхности покрыто водой.</p><p>Полностью обращается вокруг своей оси за примерно 24 часа, что определяет длину суток.</p></div></div>
+                    <div class="planet" id="mars"><h1>Марс</h1><img src="./img/card_mars.png" alt=""><div class="text"><p>Имеет самую высокую гору в Солнечной Системе - вулкан Олимп, высота которого превышает 21 километр.</p><p>Обладает атмосферой, состоящей в основном из углекислого газа.</p><p>Имеет ледяные полярные шапки, которые могут изменяться в размерах в зависимости от сезона.</p></div></div>
+                    <div class="planet" id="jupiter"><h1>Юпитер</h1><img src="./img/card_jupiter.png" alt=""><div class="text"><p>Самая крупная планета в Солнечной Системе.</p><p>Обладает большею количеством спутников, чем у любой другой планеты - более 79 известных на данный момент.</p><p>Обладает огромным магнитным полем, которое создает мощные радиоизлучения.</p></div></div>
+                    <div class="planet" id="saturn"><h1>Сатурн</h1><img src="./img/card_saturn.png" alt=""><div class="text"><p>Имеет кольца, состоящие изо льда, камней и пыли.</p><p>Сатурн также обладает уникальной системой спутников, среди которых самый большой - Титан, имеющий атмосферу и океаны из жидкого метана и этана.</p><p>Его плотность невысока, поэтому он мог бы плавать в океане, если бы такой огромный океан был.</p></div></div>
+                    <div class="planet" id="uranus"><h1>Уран</h1><img src="./img/card_uranus.png" alt=""><div class="text"><p>Вращается на боку, что делает его ось вращения горизонтальной относительно орбиты.</p><p>Имеет ледяной оболочку, скрывающуюся под атмосферой водорода и гелия.</p><p>Уран обладает кольцами, хотя они гораздо менее заметны, чем у Сатурна.</p></div></div>
+                    <div class="planet" id="neptune"><h1>Нептун</h1><img src="./img/card_neptune.png" alt=""><div class="text"><p>Самая холодная планета в Солнечной Системе.</p><p>Имеет самую высокую скорость ветра среди всех планет - около 2000 км/ч.</p><p>Обладает кольцами, состоящими из льда, пыли и газа.</p></div></div>
                 </section>
                 <section class="also-check">
                     <h1>Посетите так же</h1>

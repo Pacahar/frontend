@@ -4,13 +4,13 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
-        <script src="script.js"></script>
+        <script src="burger.js"></script>
         <link rel="stylesheet" href="hf.css">
         <link rel="stylesheet" href="auth.css">
         <title>Solar system</title>
         <link rel="icon" href="favicon.ico" sizes="any">
     </head>
-    <body onload="afterLoad()">
+    <body>
         <div class="page">
 <!-- Хедер -->
             <header>
@@ -22,11 +22,30 @@
                     <li><a href="./merch.html">Мерч</a></li>
                     <li><a href="./auth.html">Войти</a></li>
                 </ul>
+
+                <input type="button" value="☰" id="burgbtn" onclick="changeBurg()">
+                <div class="other" onclick="changeBurg()"></div>
+                <div class="burger">
+                    <div class="nav">
+                        <a href="./index.html">Главная</a>
+                        <a href="./planets.html">Планеты</a>
+                        <a href="./asteroids.html">Астероиды</a>
+                        <a href="./merch.html">Мерч</a>
+                        <a href="./auth.html">Войти</a>
+                    </div>
+                </div>
             </header>
 
 <!--Мэйн-->
             <main>
-                
+                <form action="" method="get" class="form"> 
+                    <h3>Войти в аккаунт</h3>   
+                    <input type="text" name="" id="name" placeholder="Ваше имя">
+                    <input type="text" name="" id="secondname" placeholder="Ваша фамилия">
+                    <input type="text" name="" id="mail" placeholder="Ваша почта">
+                    <input type="password" name="" id="password" placeholder="Ваш пароль">
+                    <button class="btn" onclick="alert('Данная функция еще не реализована :<')" disabled="true">Войти</button>
+                </form>
             </main>
 
 <!-- Футер -->
